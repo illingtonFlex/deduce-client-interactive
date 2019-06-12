@@ -1,3 +1,5 @@
+package jcn.deduce.client.view
+
 import tornadofx.*
 
 class LettersGridView : View() {

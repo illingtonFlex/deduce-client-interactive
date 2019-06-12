@@ -1,3 +1,5 @@
+package jcn.deduce.client.view
+
 import tornadofx.View
 import tornadofx.borderpane
 

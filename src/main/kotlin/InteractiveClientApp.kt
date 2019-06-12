@@ -1,4 +1,5 @@
 import javafx.stage.Stage
+import jcn.deduce.client.view.MainView
 import tornadofx.App
 
 class InteractiveClientApp : App(MainView::class) {
