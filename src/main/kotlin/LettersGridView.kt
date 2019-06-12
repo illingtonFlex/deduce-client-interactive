@@ -1,6 +1,3 @@
-import javafx.beans.property.SimpleIntegerProperty
-import javafx.scene.control.Label
-import javafx.scene.layout.BorderPane
 import tornadofx.*
 
 class LettersGridView : View() {
