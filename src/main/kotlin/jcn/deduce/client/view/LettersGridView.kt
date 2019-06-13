@@ -1,7 +1,7 @@
 package jcn.deduce.client.view
 
 import tornadofx.*
-import jcn.deduce.client.InteractiveClientApp.Companion.knownLetters
+import jcn.deduce.client.TornadoFxApplication.Companion.knownLetters
 
 
 class LettersGridView : View() {
@@ -22,8 +22,8 @@ class LettersGridView : View() {
                     val displayIndex = rowSize * rowIndex + buttonIndex
 
                     button("${element ?: displayIndex}") {
-
-                        useMaxWidth = true
+                        minWidth = 80.00
+                        minHeight = 80.00
 
                         action {
                             this.isDisable = true
@@ -31,8 +31,8 @@ class LettersGridView : View() {
                         }
 
                         gridpaneConstraints {
-                            marginBottom = 10.0
-
+                            marginTopBottom(10.00)
+                            marginLeftRight(10.00)
                         }
                     }
                 }
