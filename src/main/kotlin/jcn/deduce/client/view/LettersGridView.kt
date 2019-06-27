@@ -29,7 +29,9 @@ class LettersGridView : View() {
                         minHeight = 80.00
 
                         action {
-                            this.text = get("$apiBaseUrl/$currentMatchId/letterAtIndex/$displayIndex").jsonObject.getString("entity")
+                            val response = get("$apiBaseUrl/$currentMatchId/letterAtIndex/$displayIndex")
+                            println(response.jsonObject.toString())
+                            this.text = response.jsonObject.getString("entity")
                             this.isDisable = true
                         }
 

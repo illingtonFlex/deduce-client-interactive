@@ -15,6 +15,7 @@ class TornadoFxApplication : App(MainView::class) {
 
     override fun init() {
         currentMatchId = post("$apiBaseUrl/createMatch").jsonObject.getJSONObject("entity").get("id").toString()
+        println(currentMatchId)
     }
 
     override fun start(stage: Stage) {
