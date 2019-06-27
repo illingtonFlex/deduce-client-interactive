@@ -2,8 +2,8 @@ package jcn.deduce.client.view
 
 import jcn.deduce.client.TornadoFxApplication.Companion.currentMatchId
 import jcn.deduce.client.TornadoFxApplication.Companion.endpoint
-import tornadofx.*
 import jcn.deduce.client.TornadoFxApplication.Companion.knownLetters
+import tornadofx.*
 import khttp.get
 
 
