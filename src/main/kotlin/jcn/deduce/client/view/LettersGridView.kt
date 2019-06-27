@@ -1,7 +1,7 @@
 package jcn.deduce.client.view
 
 import jcn.deduce.client.TornadoFxApplication.Companion.currentMatchId
-import jcn.deduce.client.TornadoFxApplication.Companion.endpoint
+import jcn.deduce.client.TornadoFxApplication.Companion.apiBaseUrl
 import jcn.deduce.client.TornadoFxApplication.Companion.knownLetters
 import tornadofx.*
 import khttp.get
@@ -29,7 +29,7 @@ class LettersGridView : View() {
                         minHeight = 80.00
 
                         action {
-                            this.text = get("$endpoint/$currentMatchId/letterAtIndex/$displayIndex").jsonObject.getString("entity")
+                            this.text = get("$apiBaseUrl/$currentMatchId/letterAtIndex/$displayIndex").jsonObject.getString("entity")
                             this.isDisable = true
                         }
 
