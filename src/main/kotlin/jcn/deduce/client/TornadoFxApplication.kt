@@ -3,18 +3,20 @@ package jcn.deduce.client
 import javafx.stage.Stage
 import jcn.deduce.client.view.MainView
 import tornadofx.App
-import tornadofx.launch
+import khttp.post
 
 class TornadoFxApplication : App(MainView::class) {
     companion object {
+        const val endpoint = "http://deduce-api.ws:8080/deduceMatch"
+
         var knownLetters = arrayOfNulls<String>(21)
+        var currentMatchId = "";
     }
 
     override fun init() {
-        //Testing only, TODO delete this.
-        knownLetters[4] = "T"
-        knownLetters[9] = "G"
-        knownLetters[17] = "Z"
+        val r = post(endpoint+"/createMatch")
+        currentMatchId = r.jsonObject.getJSONObject("entity").get("id").toString()
+
     }
 
     override fun start(stage: Stage) {
